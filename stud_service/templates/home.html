@@ -1,8 +1,31 @@
 {% extends 'base.html' %}
+
+{% load crispy_forms_tags %}
+
+**people/person_form.html**
+
 {% block content %}
-<form method="post" novalidate>
-  {% csrf_token %}
-  {{ form.as_ul}}
-  <button type="submit">Submit</button>
-</form>
+  <form method="post" novalidate>
+    {% csrf_token %}
+    <div class="row">
+      <div class="col-6">
+        {{ form.first_name|as_crispy_field }}
+      </div>
+      <div class="col-6">
+        {{ form.second_name|as_crispy_field }}
+      </div>
+    </div>
+    <div class="row">
+        <div class="col-6">
+            {{ form.group|as_crispy_field }}
+        </div>
+
+        <div class="col-6">
+            {{ form.phone|as_crispy_field }}
+        </div>
+    </div>
+    {{ form.reason|as_crispy_field }}
+    {{ form.money|as_crispy_field }}
+    <button type="submit" class="btn btn-success">Подать заявление и создать pdf</button>
+  </form>
 {% endblock %}
