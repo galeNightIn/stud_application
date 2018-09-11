@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<page>
+        <div align="right" style="font-family: 'Serif'">
+            <p>Директору школы ФРКТ               </p>
+            <p>Дворковичу Александру Викторовичу  </p>
+            <p>от студента(-ки) {{ group }} группы</p>
+            <p>{{ first_name }} {{ second_name }} </p>
+            <p>тел: {{ phone }}</p>
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <div align="center" style="font-family: 'Serif'">
+            <p><h2>Заявление</h2> </p>
+        </div>
+        <br>
+        <br>
+        <div align="left" style="font-family: 'Serif'">
+            <p>Прошу оказать мне материальную помощь по причине {{ reason }} в размере {{ money }} рублей.</p>
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <div style="font-family: 'Serif'">
+            <p>{{ day }} {{ month }} {{ year }}г.             _________________ / ______________________</p>
+        </div>
+        <br>
+        <br>
+        <div align="left" style="font-family: 'Serif'">
+            <p>Решение стипендиальной комиссии: материальную помощь назначить / не назначать</p>
+            <p>{{ day }} {{ month }} {{ year }}г.             _________________ / Микоян Ф.А.</p>
+        </div>
+</page>
+{% endblock%}
